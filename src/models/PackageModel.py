@@ -37,20 +37,17 @@ class OutputImage(Output):
     class Config:
         title = "Image"
 
-class StorageSource(Config):
-    """
-        Is corresponds to path of the video.
-    """
-    name: Literal["storageSource"] = "storageSource"
+class ModelSource(Config):
+    name: Literal["modelSource"] = "modelSource"
     value: str
     type: Literal["string"] = "string"
     field: Literal["widget"] = "widget"
     
     class Config:
         json_schema_extra = {
-            "class": "portalium\\storage\\widgets\\FilePicker"
+            "class": "portalium\\storage\\widgets\\FilePicker",
         }
-        title = "Storage Source"
+        title = "Model Source"
 
 
 class PackageInputs(Inputs):
@@ -58,7 +55,7 @@ class PackageInputs(Inputs):
 
 
 class PackageConfigs(Configs):
-    storageSource: StorageSource
+    modelSource: ModelSource
 
 
 class PackageOutputs(Outputs):
