@@ -45,7 +45,7 @@ class ModelSource(Config):
     
     class Config:
         json_schema_extra = {
-            "class": "portalium\\storage\\widgets\\FilePicker",
+            "class": "novavision\\model\\widgets\\ModelPicker",
         }
         title = "Model Source"
 
