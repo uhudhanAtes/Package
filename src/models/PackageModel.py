@@ -42,10 +42,10 @@ class StorageSource(Config):
         Is corresponds to path of the video.
     """
     name: Literal["storageSource"] = "storageSource"
-    value: int
-    type: Literal["number"] = "number"
-    field: Literal["filePicker"] = "filePicker"
-
+    value: str
+    type: Literal["string"] = "string"
+    field: Literal["widget"] = "widget"
+    
     class Config:
         json_schema_extra = {
             "class": "portalium\\storage\\widgets\\FilePicker"
