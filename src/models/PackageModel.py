@@ -48,14 +48,7 @@ class StorageSource(Config):
 
     class Config:
         json_schema_extra = {
-            "class": "portalium\\storage\\widgets\\FilePicker",
-            "options": {
-                "multiple": 0,
-                "returnAttribute": [
-                    "name"
-                ],
-                "name": "app::logo_wide"
-            }
+            "class": "portalium\\storage\\widgets\\FilePicker"
         }
         title = "Storage Source"
 
